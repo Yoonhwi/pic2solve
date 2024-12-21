@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import localFont from "next/font/local";
+
+const BMJUA = localFont({
+  src: [
+    {
+      path: "../font/BMJUA_ttf.ttf",
+      weight: "normal",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Pic2-Solve",
@@ -15,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+      <body className={`${BMJUA.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

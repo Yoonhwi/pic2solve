@@ -12,7 +12,11 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 
-const themeOptions = ["light", "dark", "system"];
+const themeOptions = [
+  { value: "light", label: "밝게" },
+  { value: "dark", label: "어둡게" },
+  { value: "system", label: "시스템" },
+];
 
 const ThemeSwitcher = () => {
   const { setTheme } = useTheme();
@@ -28,8 +32,12 @@ const ThemeSwitcher = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {themeOptions.map((theme) => (
-          <DropdownMenuItem key={theme} onClick={() => setTheme(theme)}>
-            {capitalize(theme)}
+          <DropdownMenuItem
+            key={theme.value}
+            onClick={() => setTheme(theme.value)}
+            className="text-md text-primary cursor-pointer focus:bg-background focus:text-primary"
+          >
+            {capitalize(theme.label)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
