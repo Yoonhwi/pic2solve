@@ -1,13 +1,17 @@
+import { ClassValue } from "clsx";
 import BaseLayoutHeader from "./basy-layout.header";
+import { cn } from "@/lib/utils";
 
 interface BaseLayoutProps {
   children: Readonly<React.ReactNode>;
+  parentStyle?: ClassValue;
 }
-const BaseLayout = ({ children }: BaseLayoutProps) => {
+
+const BaseLayout = ({ children, parentStyle }: BaseLayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen text-lg">
+    <div className="flex flex-col min-h-screen text-primary">
       <BaseLayoutHeader />
-      <div className="flex flex-1 justify-center py-2">
+      <div className={cn("flex flex-1 justify-center", parentStyle)}>
         <div className="w-content">{children}</div>
       </div>
     </div>

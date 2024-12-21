@@ -35,7 +35,7 @@ const ThemeSwitcher = () => {
           <DropdownMenuItem
             key={theme.value}
             onClick={() => setTheme(theme.value)}
-            className="text-md"
+            className="text-md text-primary cursor-pointer focus:bg-background focus:text-primary"
           >
             {capitalize(theme.label)}
           </DropdownMenuItem>
