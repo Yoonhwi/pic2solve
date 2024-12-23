@@ -1,1 +1,1 @@
-export { default as MainDesCard } from "./main-des-card";
+export { default as MainImgCard } from "./main.img-card";

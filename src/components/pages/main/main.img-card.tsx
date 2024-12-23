@@ -7,7 +7,7 @@ interface MainDesCardProps {
   size: number | `${number}` | undefined;
 }
 
-const MainDesCard = ({ imgSrc, alt, size }: MainDesCardProps) => {
+const MainImgCard = ({ imgSrc, alt, size }: MainDesCardProps) => {
   return (
     <div className="w-[420px] h-[600px] bg-background rounded-md p-4 shadow-md flex items-center justify-center">
       <Image
@@ -21,4 +21,4 @@ const MainDesCard = ({ imgSrc, alt, size }: MainDesCardProps) => {
   );
 };
 
-export default MainDesCard;
+export default MainImgCard;

@@ -39,6 +39,7 @@ body {
     --ring: 31 67% 23%;
 
     --radius: 0.5rem;
+    --text-light: 31 3.35% 30%;
   }
 
   .dark {
@@ -69,6 +70,8 @@ body {
     --border: 0 0% 12%;
     --input: 0 0% 18%;
     --ring: 0 0% 40%;
+
+    --text-light: 0 0% 100%;
   }
 }
 
